@@ -1,0 +1,98 @@
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    07/05/17 10:50:06
+Week 2 Assignment 2.asm					     Page 1 - 1
+
+
+				;Week 2 Assignment 1
+				;Rian Booyer
+				;CISS 360 ADE
+				COMMENT ~
+				2. Symbolic Integer Constants
+				Write a program that defines symbolic constants for all seven days of the week. Create an array
+				variable that uses the symbols as initializers.
+				~
+
+				;INCLUDE Irvine32.inc
+				.386
+				.model flat,stdcall
+				.stack 4096
+				ExitProcess PROTO, dwExitCode:DWORD
+
+
+
+ 00000000			.data
+
+				;following define symbolic constants using =
+ = 00000000			Monday = 0
+ = 00000001			Tuesday = 1
+ = 00000002			Wednesday = 2
+ = 00000003			Thursday = 3
+ = 00000004			Friday = 4
+ = 00000005			Saturday = 5
+ = 00000006			Sunday = 6
+
+ 00000000 00000000		daysOfWeek DWORD Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday ;creates an array variable of symbolic constants
+	   00000001
+	   00000002
+	   00000003
+	   00000004
+	   00000005
+	   00000006
+
+
+ 00000000			.code
+ 00000000			main proc
+					
+					;i don't know yet how to test this any suggestions would be appreciated.
+
+									
+					INVOKE ExitProcess,0
+ 00000007			main endp
+				end main
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    07/05/17 10:50:06
+Week 2 Assignment 2.asm					     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 DWord	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 0000001C DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000007 DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000007 Public STDCALL
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+Friday . . . . . . . . . . . . .	Number	 00000004h   
+Monday . . . . . . . . . . . . .	Number	 00000000h   
+Saturday . . . . . . . . . . . .	Number	 00000005h   
+Sunday . . . . . . . . . . . . .	Number	 00000006h   
+Thursday . . . . . . . . . . . .	Number	 00000003h   
+Tuesday  . . . . . . . . . . . .	Number	 00000001h   
+Wednesday  . . . . . . . . . . .	Number	 00000002h   
+daysOfWeek . . . . . . . . . . .	DWord	 00000000 _DATA	
+
+	   0 Warnings
+	   0 Errors
