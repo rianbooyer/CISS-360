@@ -1,0 +1,5 @@
+﻿1>------ Build started: Project: Week 4 Assignment 3, Configuration: Debug Win32 ------
+1>  Assembling Week 4 Assignment 3.asm...
+1>  Week 4 Assignment 3.vcxproj -> D:\Google Drive\rians documents\college\collumbia college\Classes\CISS 360\Week 4\Week 4 Assignment 3\Debug\Week 4 Assignment 3.exe
+1>  Week 4 Assignment 3.vcxproj -> D:\Google Drive\rians documents\college\collumbia college\Classes\CISS 360\Week 4\Week 4 Assignment 3\Debug\Week 4 Assignment 3.pdb (Full PDB)
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
